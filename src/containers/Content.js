@@ -10,7 +10,7 @@ import {
 import Home from '../components/home'
 import Profile from '../components/profile';
 
-const Content = () => {
+const Main = () => {
     return (
     <Switch>
         <Route exact path='/home' component={Home}/>
@@ -21,4 +21,4 @@ const Content = () => {
 
     </Switch>)
   };
-  export default Content;
+  export default Main;
