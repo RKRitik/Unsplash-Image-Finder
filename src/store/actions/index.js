@@ -1,7 +1,10 @@
-import { GET_IMAGES, RECEIVE_IMAGES_SUCCESS, LIKE,UNLIKE,RECEIVE_IMAGES_FAILURE, SET_IMAGES } from '../constants'
+import { GET_IMAGES, RECEIVE_IMAGES_SUCCESS, LIKE,UNLIKE,RECEIVE_IMAGES_FAILURE } from '../constants'
 
-export const fetchImages = () => ({
+export const fetchImages = (text,page,page_size) => ({
   type: GET_IMAGES,
+  data:text,
+  page,
+  page_size
 });
 
 export const receiveImageSuccess = (data) => ({
@@ -14,9 +17,9 @@ export const receiveImageFailure = (error) => ({
   error,
 });
 
-export const handleLike = (id,url)=>({
+export const handleLike = (img)=>({
  type:LIKE,
-  data:{id,url}
+  data:img
 })
 export const handleUnlike = (id)=>({
 type:UNLIKE,

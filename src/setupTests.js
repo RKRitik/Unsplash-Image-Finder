@@ -3,3 +3,7 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+
+import 'regenerator-runtime/runtime'
+global.fetch = require('jest-fetch-mock'); 
+fetch.mockResponse(JSON.stringify({ testing: true }));

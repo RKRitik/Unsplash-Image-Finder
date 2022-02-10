@@ -1,13 +1,12 @@
+import { fetchImages } from '../store/actions';
 import{
     Row,
     Col,
     Input,
     Button
   } from 'antd';
-  
-  import {GET_IMAGES } from '../store/constants'
+  import React from 'react'
   import {useState} from 'react';
-
   import { useDispatch } from 'react-redux';
   
   
@@ -16,12 +15,14 @@ import{
 
       const dispatch = useDispatch()
       return (
-        <div className='mt-5'>
+        
           <Row>
-                <Input value={text} onChange={(val)=>{setText(val.target.value)}}></Input>
-                <Button className="mt-2" size={"large"} type="primary" onClick={()=>{dispatch({type:GET_IMAGES,data:text,page:1})}}>Search</Button>
-                </Row>
-        </div>)
+                <Col ><Input value={text} aria-label="search" onChange={(val)=>{setText(val.target.value)}}></Input></Col>
+                <Col ><div data-testid="search-1"><Button   type="primary" onClick={()=>{if(!text.match(/^\s*$/g)) dispatch(fetchImages(text,1,10))}}>Search</Button></div></Col>
+                
+                
+          </Row>
+        )
     };
   
   

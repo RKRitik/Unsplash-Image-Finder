@@ -1,16 +1,15 @@
-# Demo app
+# Images Search APP with unsplash API
 
+## Created with Create-React-app
 
+## Stores Liked image in state.
+React-Redux as Stage Management
+Redux-Saga for middleware API call.
 
-Build a demo project, in which you will use React, redux and saga.
-Create a an e-commerce page, where you will fetch a list of images, and  a search input, where when you type the image name, you get the desired results.
-Create a like button, on the image, where a user can like and unlike an image.
+# TO use : 1)Create account on Unsplash
+2)Create New Application 'https://unsplash.com/developers'
 
-Use https://unsplash.com/developers for the api's.
+3)Copy Access Key to src/config.js
 
-In that, create a user profile, which shows, the liked images that we have selected. Store those images in the reducer and then, show those, in the profile page.
-Things to take care of: 
-Routes
-ReactJS and Redux project setup
-Saga flow, for api calls
-Project architecture.
+4) Git clone , npm install , npm start
+

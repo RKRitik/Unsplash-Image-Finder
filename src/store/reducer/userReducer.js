@@ -3,13 +3,13 @@
 export default (
   state = {
     auth:{name:'Ritik'},
-    likes:[ ]
+    likes:[    ]
     
   , error: null, loading: false}, 
   {error,data,type}) => {
     switch (type) {
       case LIKE:{
-        console.log(data)
+        //console.log(data)
         return {...state,
           likes: [...state.likes, data]
         }

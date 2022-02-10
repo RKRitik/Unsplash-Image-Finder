@@ -5,8 +5,14 @@
 /.pnp
 .pnp.js
 
+.env
+
 # testing
 /coverage
+test.config.js
+/src/store/reducer/reducer.test.js
+/src/components/home/home.test.js
+/src/components/profile/profile.test.js
 
 # production
 /build
